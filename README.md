@@ -28,12 +28,3 @@ Project will use: Python, Flask, HTML and CSS
 5. Data is validated upon create and edit, errors show
 6. Login and Registration with validations
 7. Protected routes
-
-Bonus requirements:
-
-1. Project will have a many-to-many relationship
-
-Strech goals:
-
-1. Email integration for update and notification
-2. Google Maps API for directions and locations
