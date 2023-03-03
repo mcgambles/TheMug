@@ -1,0 +1,1173 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-weight: 700;
+}
+body{
+    background-color: #333;
+    color:#222;
+    overflow-x:hidden;
+}
+h3{
+    overflow: hidden;
+}
+.container-errorMes {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.indexContainer{
+    border:solid 4px;
+
+    height:100vh;
+    width:100vw;
+
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:space-around;
+    background-image:url('https://png.pngtree.com/background/20211217/original/pngtree-dice-poker-casino-light-effect-background-picture-image_1597218.jpg');
+    background-size: cover;
+}
+.siteTitle{
+    display: flex;
+    align-items: center;
+    font-size: 120px;
+    background-color: rgba(31, 74, 79, 0.49);
+    height:30px;
+    color:antiquewhite;
+    font-family: 'Aboreto';
+    text-shadow:
+    -1px -1px 0 #000,  
+    .25px -1px 0 #000,
+    -1px .25px 0 #000,
+    .25px .25px 0 #000;
+}
+.LogAndReg{
+    border-radius: 10pt;
+    height:32vh;
+    width:55vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity:0;
+    background: rgba(68, 138, 146, 0.49);
+}
+.LogAndRegAnimate {
+    border-radius: 10pt;
+    height:45vh;
+    width:55vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgba(68, 138, 146, 0.49);
+    transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -webkit-transition: opacity .4s ease-in-out;
+}
+.indexBtn{
+    background-color: antiquewhite;
+    color: #000;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 18pt;
+    border:none;
+    border-radius: 10pt;
+    height:40px;
+    width:150px;
+    cursor:pointer;
+    box-shadow:
+    -2px -2px 0 rgba(0, 0, 0, 0.512),  
+    2px -2px 0 rgba(0, 0, 0, 0.463),
+    -2px 2px 0 rgba(0, 0, 0, 0.488),
+    2px 2px 0 rgba(0, 0, 0, 0.461);
+}
+.navDashBtn.indexBtn,.indexBtnReg,.indexBtnLog:active{
+    transform:scale(.98);
+}
+.indexBtnReg{
+    background-color: antiquewhite;
+    color: #000;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 18px;
+    border:none;
+    border-radius: 10pt;
+    height:20px;
+    width:150px;
+    margin:10px;
+    cursor:pointer;
+    box-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.indexBtnLog{
+    background-color: antiquewhite;
+    color: #000;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 18px;
+    border:none;
+    border-radius: 10pt;
+    margin-top:20px;
+    height:20px;
+    width:150px;
+    cursor:pointer;
+    box-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.btnShow{
+    background-color:rgb(100, 196, 121);
+    border:none;
+    text-decoration: none;
+    color:black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:35px;
+    cursor:pointer;
+
+    border-radius: 2pt;
+    width:130px;
+    height:35px;
+    font-size:18pt;
+}
+.btnShowDis{
+    background-color:grey;
+    border:none;
+    text-decoration: none;
+    color:black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:35px;
+    cursor:not-allowed;
+
+    border-radius: 2pt;
+    width:130px;
+    height:35px;
+    font-size:18pt;
+}
+.containerLogin{
+    color:white;
+}
+.containerReg{
+    color:white;
+}
+.form-control{
+    background:transparent;
+    border:none;
+    box-shadow:
+    0px 1px 0 antiquewhite;
+}
+.placeholder{
+    color:antiquewhite;
+}
+.loginLabel{
+    text-decoration: underline;
+    font-size:20pt;
+    margin-bottom:10px;
+}
+.regLabel{
+    font-size: 20pt;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.flashContainer{
+    background-color: antiquewhite;
+    width:25vw;
+    height:10vh;
+    border-radius: 10pt;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+input:focus{
+    background-color: antiquewhite;
+}
+
+.containerDash{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://png.pngtree.com/background/20211215/original/pngtree-cool-landscape-casino-background-picture-image_1467910.jpg');
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-position: center top;
+    height:100vh;
+    font-family: 'Exo', sans-serif;
+}
+.containerDashNav{
+    display: flex;
+    border-radius: 10pt;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:200px;
+    padding-right:200px;
+    margin:10px;
+    width:100vw;
+    height:10vh;
+    background: rgba(68, 138, 146, 0.556);    
+    background-size:100%;
+    background-position:center top ;
+    background-repeat:no-repeat;
+    width:98vw;
+    height:120px;
+    font-family: 'Exo', sans-serif;
+
+    box-shadow:
+    0px 0px 0 rgba(0, 0, 0, 0.424),  
+    0px 0px 0 rgba(0, 0, 0, 0.424),
+    6px 10px 0 rgba(0, 0, 0, 0.31),
+    0px 0px 0 rgba(0, 0, 0, 0.424);
+}
+.navDash{
+    display:flex;
+    justify-content: space-around;
+    font-family: 'Exo', sans-serif;
+}
+.navDashBtn{
+    color:white;
+    font-size: 35pt;
+    text-decoration: none;
+    border-top:solid white 1px;
+    border-bottom:solid white 1px;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+.navDashBtn:hover{
+    transform:scale(1.15);
+}
+.tableLabels{
+    margin-top: 50px;
+    padding-right: 40px;
+    border:solid white;
+    display:flex;
+    width:85vw;
+    height:5vh;
+    justify-content: center;
+    align-items: center;
+}
+.centerHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    font-size: 40pt;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    color:black;
+    margin: 120px;
+}
+.rowDash{
+    border-left:solid white;
+    padding:25px;
+    height:60vh;
+    width:85vw;
+    overflow:scroll;
+    overflow-x: hidden;
+    color:black;
+    display:flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: antiquewhite;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.088);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.viewJob{
+    color:black;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 30pt;
+    text-decoration:none ;
+}
+.table{
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    border-radius: 4pt;
+    
+    box-shadow:
+    0px 0px 0 rgba(0, 0, 0, 0.424),  
+    0px 0px 0 rgba(0, 0, 0, 0.424),
+    8px 12px 0 rgba(0, 0, 0, 0.165),
+    0px 0px 0 rgba(0, 0, 0, 0.218);
+}
+.tdDash{
+    font-size: 23.5pt;
+    border-radius: 2pt;
+    background-color: rgba(226, 157, 19, 0.493);
+    height:40px;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    border-bottom:solid antiquewhite 2px;
+    border-right:solid antiquewhite 2px;
+    
+}
+.viewJob:hover{
+    text-shadow:
+    0px 0px 0 rgba(0, 0, 0, 0.424),  
+    0px 0px 0 rgba(0, 0, 0, 0.424),
+    1px 1px 0 rgba(0, 0, 0, 0.424),
+    0px 0px 0 rgba(0, 0, 0, 0.218);;
+}
+th{
+    border:solid white;
+    text-decoration: underline;
+    font-size: 35pt;
+    height:40px;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+.jobLabel{
+    color:white;
+    font-size:50pt;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+.jobLabel0{
+    color:white;
+    font-size:30pt;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+.containerCreate{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    width:100vw;
+    background-image:url(https://png.pngtree.com/background/20210714/original/pngtree-flying-chips-poker-casino-betting-border-background-picture-image_1199551.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center ;
+}
+.navCreate{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+.navCreateBtn{
+    color:blanchedalmond;
+    font-size: 30pt;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+.navCreateLabel{
+    color:blanchedalmond;
+    font-size: 60pt;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+.containerFormCreate{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width:100vw;
+    height:100vh;
+}
+.formCreate{
+    margin:40px;
+    padding:40px;
+    border-radius: 3pt;
+
+    width:45vw;
+    height:70vh;
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+}
+.formDate{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+input, textarea{
+    background:transparent;
+    border-top:#000 1px;
+    border-left:#000 1px;
+    font-size: 15pt;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top:15px;
+}
+label{
+    font-size: 20pt;
+}
+
+.menu {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.containerShow{
+    border:solid rgba(68, 138, 146, 0.49) 15px;
+
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:blanchedalmond ;
+
+    transform-origin: top left;
+    transition:transform 0.45s ease-in-out ;
+}
+.rightContent{
+    height:100vh;
+    width:50vw;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.leftContent{
+    height:100vh;
+    width:50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.jobTitle0{
+    color:rgba(0, 0, 0, 0.546);
+    font-size: 25pt;
+}
+.jobTitle{
+    width:40vw;
+    height:10vh;
+    border-bottom: rgba(0, 0, 0, 0.534) solid 2px;
+    border-right: rgba(0, 0, 0, 0.491) solid 2px;
+
+    margin-bottom:150px;
+    font-size: 40pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+    0px 0px 0 rgba(0, 0, 0, 0.424),  
+    0px 0px 0 rgba(0, 0, 0, 0.424),
+    6px 6px 0 rgba(0, 0, 0, 0.29),
+    0px 0px 0 rgba(0, 0, 0, 0.302);
+}
+.jobImage{
+    border:rgba(68, 138, 146, 0.576) 15px solid;
+    border-bottom:none;
+
+    height:60vh;
+    width:50vw;
+    margin-left:12px;
+    margin-bottom:25px;
+    border-radius:4pt;
+    background-image:url(https://www.thevelvetstore.com/wp-content/uploads/2014/05/dogs-playing-poker.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:100% 200%;
+
+    box-shadow:
+    0px 0px 0 rgba(0, 0, 0, 0.424),  
+    0px 0px 0 rgba(0, 0, 0, 0.424),
+    11px 2px 0 rgba(0, 0, 0, 0.424),
+    0px 0px 0 rgba(0, 0, 0, 0.424);
+}
+.containerShow.show-nav{
+    transform:rotate(-20deg);
+}
+.circle-container{
+    position:fixed;
+    top:-100px;
+    left: -100px;
+}
+.circle{
+    background-color: rgba(226, 157, 19, 0.493);
+    height: 250px;
+    width:250px;
+    border-radius: 50%;
+    position:relative;
+    transition: transform .45s ease-in-out;
+
+    box-shadow:
+    0px 0px 0 rgba(0, 0, 0, 0.424),  
+    0px 0px 0 rgba(0, 0, 0, 0.424),
+    8px 5px 0 rgba(0, 0, 0, 0.424),
+    0px 0px 0 rgba(0, 0, 0, 0.424);
+}
+.container.show-nav .circle{
+    transform: rotate(-70deg);
+}
+.circle button{
+    cursor:pointer;
+    position: absolute;
+    top:50%;
+    left:50%;
+    height:100px;
+    background: transparent;
+    border:0;
+    font-size: 26px;
+    color:white;
+}
+.circle button:focus{
+    outline:none;
+}
+.circle button#open{
+    left: 60%;
+}
+.circle button#close{
+    top:60%;
+    transform:rotate(90deg);
+    transform-origin:top left;
+}
+.containerShow.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay:.3s;
+}
+nav{
+    position:fixed;
+    bottom: 10px;
+    left:-5px;
+    z-index:100;
+}
+nav {
+    list-style-type:none;
+    padding-left: 30px;
+}
+nav ul li{
+    color:white;
+    margin:40px 0;
+    transform:translateX(-100%);
+    transition:transform 0.4s ease-in-out;
+    cursor:pointer;
+}
+nav ul li + li{
+    margin-left:3px;
+    transform:translateX(-150%);
+    cursor:pointer;
+}
+nav ul li + li + li{
+    margin-left:10px;
+    transform:translateX(-250%);
+    cursor:pointer;
+}
+nav ul li + li + li +li{
+    margin-left:17px;
+    transform:translateX(-350%);
+    cursor:pointer;
+}
+nav ul li + li + li +li+li{
+    margin-left:24px;
+    transform:translateX(-450%);
+}
+nav ul li + li + li +li+li+li{
+    margin-left:31px;
+    transform:translateX(-550%);
+}
+.content{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.content h1{
+    margin:0;
+}
+.content small{
+    color: #555;
+    font-style:italic;
+}
+.content p{
+    color:#333;
+    line-height: 1.5;
+}
+.vol{
+    font-size: 30pt;
+}
+.volunteers{
+    height:30vh;
+    width:34.5vw;
+    overflow:scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.organizedBy{
+    width:70vw;
+    font-size: 20pt;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.showTable{
+    height:92vh;
+    width:35vw;
+    border:solid 12px rgba(68, 138, 146, 0.49);
+    border-top: none;
+    border-radius:4pt;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    box-shadow:
+    0px 0px 0 rgba(0, 0, 0, 0.424),  
+    0px 0px 0 rgba(0, 0, 0, 0.424),
+    12px 10px 0 rgba(0, 0, 0, 0.424),
+    0px 0px 0 rgba(0, 0, 0, 0.304);
+}
+
+ul.showList{
+    border-bottom: #000 solid;
+    padding:5px;
+    width:34vw;
+    display:flex;
+    flex-direction: column;
+}
+li{
+    text-align: center;
+}
+.tdShow{
+    border-radius: 2pt;
+    padding:5pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:33vw;
+    height:6vh;
+    font-size: 20pt;
+}
+.tdShowDescription{
+    border: rgba(0, 0, 0, 0.053) solid 1px;
+    font-size: 20pt;
+}
+.tdShow-status{
+    border-radius: 2pt;
+    padding:5pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:33vw;
+    font-size: 20pt;
+    color: maroon;
+}
+.tdShow-statusOpen{
+    border-radius: 2pt;
+    padding:5pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:33vw;
+    font-size: 20pt;
+    color: rgba(21, 110, 10, 0.823);
+}
+.signUpBtn{
+    background-color:rgba(0, 128, 0, 0.265);
+    border:none;
+    width:15vw;
+    height:3vh;
+    font-size: 16pt;
+    display:flex;
+    border-radius: 4pt;
+    justify-content: center;
+    box-shadow:
+    0px 0px 0 rgba(0, 0, 0, 0.424),  
+    0px 0px 0 rgba(0, 0, 0, 0.424),
+    10px 5px 0 rgba(0, 0, 0, 0.321),
+    0px 0px 0 rgba(0, 0, 0, 0.24);
+}
+.signDownBtn{
+    background-color:rgba(255, 0, 0, 0.354);
+    border:none;
+    width:15vw;
+    height:3vh;
+    font-size: 16pt;
+    display:flex;
+    border-radius: 4pt;
+    justify-content: center;
+    box-shadow:
+    0px 0px 0 rgba(0, 0, 0, 0.424),  
+    0px 0px 0 rgba(0, 0, 0, 0.424),
+    10px 5px 0 rgba(0, 0, 0, 0.321),
+    0px 0px 0 rgba(0, 0, 0, 0.24);
+}
+span{
+    background-color:rgba(226, 157, 19, 0.493);
+    height:5vh;
+    width:15vw;
+    display:flex;
+    border-radius: 4pt;
+    justify-content: center;
+    box-shadow:
+    0px 0px 0 rgba(0, 0, 0, 0.424),  
+    0px 0px 0 rgba(0, 0, 0, 0.424),
+    10px 5px 0 rgba(0, 0, 0, 0.321),
+    0px 0px 0 rgba(0, 0, 0, 0.24);
+}
+.volData{
+    margin:5px;
+    background-color:rgba(226, 157, 19, 0.493);
+    width:32vw;
+    display:flex;
+    border-radius: 4pt;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width:599px){
+        /* index */
+        .siteTitle{
+            font-size: 40px;
+        }
+        .LogAndRegAnimate{
+            width:100vw;
+            height:75vh;
+        }
+
+        .containerDash{
+            background-size:100% 100% ;
+        }
+        .containerDashNav{
+            padding:10px;   
+        }
+        .navDashBtn{
+            font-size: 25pt;
+        }
+        .tableLabels{
+            padding:0px;
+        }
+        p{
+            font-size:25pt;
+            margin:15px;
+        }
+    .jobLabel{
+        font-size: 36pt;
+    }
+    .jobLabel0{
+        font-size: 18pt;
+    }
+    p{
+    display: none;
+    } 
+    .tdDash,.viewJob{
+        font-size: 12pt;
+    }
+
+    .formCreate{
+        width:100vw;
+        height:75vh;
+    }
+    .navCreateBtn{
+        font-size: 25pt;
+    }
+    .navCreateLabel{
+        font-size:45pt;
+    }
+
+    .leftContent{
+        display: none;
+    }
+    .rightContent{
+        width:100vw;
+    }
+    .showTable{
+        width:100vw;
+        border:none;
+        box-shadow: none;
+    }
+    ul.showList{
+        height:45vh;
+        width:60vw;
+        overflow: scroll;
+        overflow-x: hidden;
+        margin-left:70px;
+        border:none;
+    }
+    .tdShow{
+        margin-top:30px;
+        font-size: 15pt;
+        width:50vw;
+    }
+    .volData{
+        width:80vw;
+        font-size: 16pt;
+    }
+    .volunteers{
+        width:90vw;
+    }
+    .btnShow{
+        transform:scale(.8);
+        margin:5px;
+    }
+}
+
+
+@media only screen and (min-width:600px){
+
+    .siteTitle{
+        font-size: 40px;
+    }
+    .LogAndRegAnimate{
+        width:100vw;
+        height:65vh;
+    }
+
+    .containerDash{
+        background-size:100% 100% ;
+    }
+    .containerDashNav{
+        padding:10px;   
+    }
+    .navDashBtn{
+        font-size: 25pt;
+    }
+    .tableLabels{
+        padding:0px;
+    }
+    p{
+        font-size:25pt;
+        margin:15px;
+    }
+ 
+    .formCreate{
+        width:100vw;
+        height:75vh;
+    }
+    .navCreateBtn{
+        font-size:30pt;
+    }
+    .navCreateLabel{
+        font-size:60pt;
+    }
+
+    .leftContent{
+        display: none;
+    }
+    .rightContent{
+        width:100vw;
+    }
+    .showTable{
+        width:100vw;
+        border:none;
+        box-shadow: none;
+    }
+    ul.showList{
+        height:45vh;
+        width:60vw;
+        overflow: scroll;
+        overflow-x: hidden;
+        margin-left:70px;
+        border:none;
+    }
+    .tdShow{
+        margin-top:30px;
+        font-size: 15pt;
+        width:50vw;
+    }
+    .volData{
+        width:80vw;
+        font-size: 16pt;
+    }
+    .volunteers{
+        width:90vw;
+    }
+    .btnShow{
+        transform:scale(.8);
+        margin:5px;
+    }
+}
+
+@media only screen and (min-width:600px){
+    .siteTitle{
+        font-size: 60px;
+    }
+    .LogAndRegAnimate{
+        width:100vw;
+        height:65vh;
+    }
+
+    .containerDash{
+        background-size:100% 100% ;
+    }
+    .containerDashNav{
+        padding:5px;   
+    }
+    .tableLabels{
+        padding:0px;
+    }
+    p{
+        font-size:25pt;
+        margin:25px;
+    }
+    
+    .formCreate{
+        width:100vw;
+        height:75vh;
+    }
+    .navCreateBtn{
+        font-size:30pt;
+    }
+    .navCreateLabel{
+        font-size:60pt;
+    }
+
+    .leftContent{
+        display: none;
+    }
+    .rightContent{
+        width:100vw;
+    }
+    .showTable{
+        width:100vw;
+        border:none;
+        box-shadow: none;
+    }
+    ul.showList{
+        height:50vh;
+        width:55vw;
+        overflow: scroll;
+        overflow-x: hidden;
+        margin-left:90px;
+        border:none;
+    }
+    .tdShow{
+        margin-top:30px;
+        font-size: 17pt;
+        width:50vw;
+    }
+    .volData{
+        width:80vw;
+        font-size: 16pt;
+    }
+    .volunteers{
+        width:90vw;
+    }
+    .btnShow{
+        transform:scale(.8);
+        margin:5px;
+    }
+    
+}
+
+@media only screen and (min-width:768px){
+    .siteTitle{
+        font-size: 80px;
+    }
+    .LogAndRegAnimate{
+        width:90vw;
+        height:65vh;
+    }
+
+    .containerDash{
+        background-size:100% 100% ;
+    }
+    .containerDashNav{
+        padding:5px;   
+    }
+    .tableLabels{
+        padding:5px;
+    }
+    p{
+        font-size:30pt;
+        margin:30px;
+    }
+
+    .formCreate{
+        width:100vw;
+        height:75vh;
+    }
+    .navCreateBtn{
+        font-size:30pt;
+    }
+    .navCreateLabel{
+        font-size:60pt;
+    }
+
+    .leftContent{
+        display: none;
+    }
+    .rightContent{
+        width:100vw;
+    }
+    .showTable{
+        width:100vw;
+        border:none;
+        box-shadow: none;
+    }
+    ul.showList{
+        height:50vh;
+        width:80vw;
+        overflow: scroll;
+        overflow-x: hidden;
+        margin-left:190px;
+        border:none;
+    }
+    .tdShow{
+        margin-top:30px;
+        font-size: 17pt;
+        width:50vw;
+    }
+    .volData{
+        width:80vw;
+        font-size: 20pt;
+    }
+    .volunteers{
+        width:90vw;
+    }
+    .btnShow{
+        transform:scale(.8);
+        margin:5px;
+    }
+}
+
+
+@media only screen and (min-width:800px){
+    .tableLabels{
+        padding:5px;
+    }
+    p{
+        font-size:35pt;
+        margin:30px;
+    }
+
+    .formCreate{
+        width:100vw;
+        height:75vh;
+    }
+    .navCreateBtn{
+        font-size:30pt;
+    }
+    .navCreateLabel{
+        font-size:60pt;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .containerDashNav{
+        padding-left:200px;
+        padding-right:200px;
+    }
+    p{
+        font-size: 40pt;
+        margin: 90px;
+    }
+    .formCreate{
+        width:100vw;
+        height:75vh;
+    }
+    .navCreateBtn{
+        font-size:30pt;
+    }
+    .navCreateLabel{
+        font-size:60pt;
+    }
+
+    .formCreate{
+        width:65vw;
+        height:75vh;
+    }
+
+    .leftContent{
+        display: flex;
+    }
+    .rightContent{
+        height:100vh;
+        width:50vw;
+        display:flex;
+        align-items: flex-start;
+        justify-content: center;   
+    }
+    .showTable{
+        height:92vh;
+        width:35vw;
+        border:solid 12px rgba(68, 138, 146, 0.49);
+        border-top: none;
+        border-radius:4pt;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+        box-shadow:
+        0px 0px 0 rgba(0, 0, 0, 0.424),  
+        0px 0px 0 rgba(0, 0, 0, 0.424),
+        12px 10px 0 rgba(0, 0, 0, 0.424),
+        0px 0px 0 rgba(0, 0, 0, 0.304);
+    }
+    ul.showList{
+        border-bottom: rgba(0, 0, 0, 0.113) solid;
+        padding:5px;
+        margin:0;
+        height:65vh;
+        width:34vw;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tdShow{
+        border-radius: 2pt;
+        margin:16px;
+        padding:5pt;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:33vw;
+        height: 5vh;
+        font-size: 20pt;
+    }
+    .volData{
+        margin:5px;
+        background-color:rgba(226, 157, 19, 0.493);
+        width:32vw;
+        display:flex;
+        border-radius: 4pt;
+        justify-content: center;;
+    }
+    .volunteers{
+        height:30vh;
+        width:34.5vw;
+        overflow:scroll;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    .btnShow{
+        transform:scale(1);
+        margin:5px;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="containerDash">
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <div class="containerDashNav">
+                    <a class="navDashBtn" href="/game/new" role="button">Add New MUG</a>
+                    <div class="centerHeader">
+                        <h3 class="jobLabel">MUG Dashboard</h3>
+                    </div>
+                    <a class="navDashBtn" href="/past" role="button">Past MUGs</a>
+                    <a class="navDashBtn" href="/logout" role="button">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="tableLabels">
+            <p>Host?</p>
+            <p>Game?</p>
+            <p>When?</p>
+            <p>Where?</p>
+            <p>More</p>
+        </div>
+        <div class="rowDash">
+            <table class="table">
+                <tbody>
+                    {% for r in all_games %}
+                    <tr class="trDash">
+                        <td class="tdDash">{{ r.creator.first_name }}</td>
+                        <td class="tdDash">{{ r.name }}</td>
+                        <td class="tdDash">{{ r.start_time.strftime('%m-%d-%Y, %I:%M %p') }}</td>
+                        <td class="tdDash">{{ r.location }}</td>
+                        <td class="tdDash"><a class="viewGame" href="/game/show/{{r.id}}" role="button">View</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/script.js') }}"></script>
+</body>
+</html>

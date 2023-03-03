@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Create New MUG</title>
+</head>
+<body>
+    <div class="containerCreate">
+        <div class="navCreate">
+            <a class="navCreateBtn" href="/dashboard">Dashboard</a>
+            <h3 class="navCreateLabel" >Create MUG</h3>
+            <a class="navCreateBtn" href="/logout">Logout</a>
+        </div>
+            <div class="containerFormCreate">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="flashContainer">
+                <div class=flashes>
+                    {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}" role="alert">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            {% endwith %}
+            <form class="formCreate" action="/game/create" method="POST">
+                <label for="name">Game</label>
+                <input type="text" placeholder="game type" name="name" >
+                <label for="num_players">Number of Players</label>
+                <input type="number" placeholder="qty of players to have game" name="num_players" >
+                <label class="formDate" for="start_time">Start Time</label>
+                <input class="formDate" type="datetime-local" placeholder="" required name="start_time" >
+                <label class="formDate"for="time">End Time</label>
+                <input class="formDate" type="datetime-local" placeholder="" required name="end_time" >
+                <label for="location">Location</label>
+                <input type="text" placeholder="meet up location" name="location" >
+                <label for="description">Description</label>
+                <textarea class="edit-textarea" placeholder="give a brief description about the game" rows="10" name="description" type="input"></textarea>
+                <div class="button">
+                    <button class="indexBtn" type="submit">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

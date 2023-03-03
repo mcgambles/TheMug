@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Show</title>
+</head>
+<body>
+    <div class="containerShow" id="containerShow">
+        <div class="circle-container">
+        </div>
+        <div class="menu" id="menu">
+            <a class="btnShow" href="/dashboard">Dashboard</a>
+            <a class="btnShow" href="/logout">Logout</a>
+            {% if session['id'] == one_game.creator.id %}
+            <form action="/game/delete/{{one_game.id}}" method="POST">
+                <input type="hidden" name="id" value="{{one_game.id}}">
+                <button type="submit" class="btnShow">Delete Game</button>
+            </form>
+            {% endif %}
+            {% if session['id'] == one_game.creator.id %}
+            <a class="btnShow" href="/game/edit/{{one_game.id}}" role="button">Edit Game</a>
+            {% endif %}   
+        </div>
+        <div class="content">
+            <div class="leftContent">
+                <h2 class="jobTitle0">Game</h2>
+                <h2 class='jobTitle'>{{ one_game.name }}</h2>
+                <div class="jobImage">
+                </div>
+            </div>
+            <div class="rightContent">
+                <div class='showTable'>
+                    <ul class="showList">
+                        <li class="tdShow-status"><span>Status:</span> CLOSED - Past Game</li>
+                        <li class="tdShow"><span>Start Date & Time:</span></li>
+                        <li class="tdShow">{{ one_game.start_time.strftime('%m-%d-%Y') }}</li>
+                        <li class="tdShow"><span>End Date & Time:</span> </li>
+                        <li class="tdShow">{{ one_game.end_time.strftime('%m-%d-%Y') }}</li>
+                        <li class="tdShow"><span>Number of Players:</span> </li>
+                        <li class="tdShow">{{ one_game.num_players }}</li>
+                        <li class="tdShow"><span>Location:</span> </li>
+                        <li class="tdShow">{{ one_game.location }}</li>
+                        <li class="tdShow"><span>Description:</span></li>
+                        <li class="tdShowDescription"> {{ one_game.description }}</li>
+                    </ul>
+                    <h3 class="vol" >Players</h3>
+                    <ul class="volunteers">
+                    {% if session['id'] == one_game.creator.id %}
+                    {%  for c in signups %}
+                        <li class="tdShowVol">
+                            <span class="volData">{{c.users_who_signuped.first_name}} {{c.users_who_signuped.last_name}} | email: {{c.users_who_signuped.email}} | phone: {{c.users_who_signuped.phone}}</span>
+                        </li>
+                    {% endfor %}
+                    {% else %}
+                    {%  for c in signups %}
+                        <li class="tdShow">
+                            <span class="volData">{{c.users_who_signuped.first_name}}</span>
+                        </li>
+                    {% endfor %}
+                    {% endif %}
+                    </ul>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/script.js') }}"></script>
+</body>
+</html>

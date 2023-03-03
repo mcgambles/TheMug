@@ -1,0 +1,174 @@
+.alert {
+    margin: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#header-img {
+    align-content: center;
+    margin: 0 auto 10px auto;
+}
+
+#header-title {
+    align-content: center;
+    margin: 0 auto 20px auto;
+}
+
+#header-img-logReg {
+    align-content: center;
+    margin: 0 auto 10px auto;
+}
+
+#header-title-logReg {
+    align-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.nav {
+    display: flex;
+    margin: 4px;
+    justify-content: flex-end;
+}
+
+.btn-home {
+    display: flex;
+    align-content: flex-start;
+    width: 100px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+}
+
+.logReg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 700px;
+}
+
+.logReg-left {
+    padding: 5px;
+}
+
+.logReg-right {
+    padding: 5px;
+}
+
+.btn-logReg {
+    width: 100px;
+}
+
+.new {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-new {
+    width: 100px;
+}
+
+.edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-edit {
+    width: 100px;
+}
+
+.edit-textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.comment {
+    max-width: 500px;
+}
+
+.show {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 700px;
+}
+
+.show-row {
+    text-align: left;
+}
+
+.btn-row {
+    align-items: center;
+}
+
+.show-comments-row {
+    text-align: left;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.form_create {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_create_comment {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: orange;
+}
+
+h3 {
+    color: purple;
+}
+
+a {
+    margin: 5px;
+}
+
+label {
+    margin: 5px;
+}
+
+input {
+    margin: 5px;
+}
+
+.btn {
+    padding: 4px;
+}
+
+tr {
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: center;
+}
+
+form {
+    margin: 5px;
+}

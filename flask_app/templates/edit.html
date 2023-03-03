@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Edit MUG</title>
+</head>
+<body>
+    <div class="containerCreate">
+        <div class="navCreate">
+            <a class="navCreateBtn" href="/dashboard">Dashboard</a>
+            <h3 class="navCreateLabel">MUG Editor</h3>
+            <a class="navCreateBtn" href="/logout">Logout</a>
+        </div>
+        <div class="containerFormCreate">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="flashContainer">
+                <div class=flashes>
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }}" role="alert">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            {% endwith %}
+            <form class="formCreate" action="/game/update" method="POST">
+                <input type="hidden" name="id" value = "{{ one_game.id }}">
+                <label for="name">Game</label>
+                <input type="text" value="{{ one_game.name }}" name="name" >
+                <label for="num_players">Number of Players</label>
+                <input type="number" value="{{ one_game.num_players }}" name="num_players" >
+                <label class="formDate" for="start_time">Start Date & Time</label>
+                <input class="formDate" type="datetime-local" value="{{ one_game.start_time }}" required name="start_time">
+                <label class="formDate" for="time">End Date & Time</label>
+                <input class="formDate" type="datetime-local" value="{{ one_game.end_time }}" required name="end_time" >
+                <label for="location">Location</label>
+                <input type="text" value="{{ one_game.location }}" name="location" >
+                <label for="description">Description</label>
+                <textarea class="edit-textarea" placeholder="give a brief description about the game" rows="10" name="description" type="input">{{ one_game.description }}</textarea>
+                <div class="button">
+                    <button class="indexBtn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
